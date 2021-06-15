@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<!-- DESIGN DRIBBLE
+    https://dribbble.com/shots/15802061-Tolkon-NFT-Marketplace-Web-Design/attachments/7614080?mode=media
+-->
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head> 
+
+    <body>
+        
+        <header>
+            <div class="container">
+                <div id="logo">
+                    <p>
+                        Cibele Rodrigues
+                    </p>
+                </div>
+
+                <div id="menu">
+                    <a href="index.html">
+                        Home
+                    </a>
+                    <a href="about.html">
+                        About me
+                    </a>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="container">
+            <div class="block">
+                <div class="cover">
+                    <img src="img/img3.svg" id="inverter" alt="Cover" width="650" height="450">
+                </div>
+
+                <div class="card">
+                    <h1 class="message-title">Leave a message!</h1>
+                      
+                    <form id = "formulario" method="post" enctype="text/plain">
+                      
+                        <label for="name" class="name">Name</label>
+                        <input class="name" type="text" id="name" name="name" placeholder="Your Name" maxlength="20">
+                      
+                        <label for="message" class="message">Message</label>
+                        <textarea name="message" cols="30" id="text" rows="7" required placeholder="Your Message" maxlength="500"></textarea>
+                      
+                        <p class="button-container">
+                            <input class="button" id="button-send" type="submit" value="Send">
+                        </p>
+                    </form>
+                    <h1 class="message-title">Message board</h1>
+                    <div id="content" class="card-board" style="overflow-y: auto; height:150px; "></div>
+                    <!-- <ul id="lista-de-mensagens">
+                        <li>
+
+                        </li>
+                    </ul> -->
+
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <footer>
+                <p class="button-container">
+                    <input class="button" type="submit" id="button-credits" value="Credits">
+                </p>
+            </footer>
+        </div>
+        <script src="board_message.js"></script>
+    </body>
+</html>
