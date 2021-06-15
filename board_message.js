@@ -21,22 +21,18 @@ function showPopUp() {
     "width=350, height=255, top=100, left=110, scrollbars=no " );
 }
 
-var name = document.getElementById("name");
+var nameP = document.getElementById("name");
 var messCol=document.getElementById("text");
 
 function send() {
 
-  const name = document.getElementById("name").value;
-
   var con=document.getElementById("content");
 
-  if(messCol.value.trim()==""){
+  if(messCol.value.trim()=="" || nameP.value == ""){
     alert("The input cannot be empty or blank");
     return;
-  }else if(name.value==""){
-    name.value = "anonimus";
   }
-
+  
 
   var messDiv=document.createElement("div");
 
@@ -53,13 +49,13 @@ function send() {
       del.innerHTML = "delete";
       messDiv.appendChild(messCon);
       messDiv.appendChild(del);
-      messCon.innerHTML=messCol.value;
+      messCon.innerHTML=nameP.value + ": " + messCol.value;
       del.onclick=function(){
         con.removeChild(this.parentNode);  
       }
     }
     con.appendChild(messDiv);
-      messCol.value="";   
+      messCol.value="";
 }
 
 
